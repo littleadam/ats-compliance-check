@@ -37,7 +37,7 @@ def is_ats_compliant(resume, job_description):
         return None, None, None
 
 def match_count(matched_keywords):
-    with open("/home/tharun/Documents/ats/job_description.txt", "r") as job_description_file:
+    with open("job_description.txt", "r") as job_description_file:
         job_description = job_description_file.readlines()
     
     no_match = 0
@@ -87,10 +87,10 @@ def match_count(matched_keywords):
 
 def main():
     # Read the resume and job description from files
-    with open("/home/tharun/Documents/ats/resume.txt", "r") as resume_file:
+    with open("resume.txt", "r") as resume_file:
         resume = resume_file.read()
 
-    with open("/home/tharun/Documents/ats/job_description.txt", "r") as job_description_file:
+    with open("job_description.txt", "r") as job_description_file:
         job_description = job_description_file.read()
 
     matched_keywords, unmatched_keywords, match_percentage = is_ats_compliant(resume, job_description)
