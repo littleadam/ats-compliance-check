@@ -47,7 +47,7 @@ def match_count(matched_keywords):
     match_list=[[],[],[],[]]
     # loop through the lines in the file
     for line in job_description:
-        if(line is '\n' or line is ""):
+        if(line == '\n' or line == ""):
             continue
         matches = 0
         # loop through the keywords
