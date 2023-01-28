@@ -1,4 +1,19 @@
 import re
+prepositions = ["at", "by", "in", "of", "on", "to", "with"]
+pronouns = ["I", "you", "he", "she", "it", "we", "they"]
+
+# Sample list
+list_with_prepositions_pronouns = ["This", "is", "a", "sentence", "with", "some", "prepositions", "and","pronouns", "in", "it"]
+
+# Function to remove prepositions and pronouns
+def remove_prepositions_pronouns(list_with_prepositions_pronouns):
+    return [word for word in list_with_prepositions_pronouns if word.lower() not in prepositions and word.lower() not in pronouns]
+
+# Call the function
+list_without_prepositions_pronouns = remove_prepositions_pronouns(list_with_prepositions_pronouns)
+
+# Print the result
+print(list_without_prepositions_pronouns)
 
 def is_ats_compliant(resume, job_description):
     # A list of keywords that are commonly used by ATS systems
