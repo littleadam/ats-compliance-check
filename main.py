@@ -4,6 +4,40 @@ pronouns = ["I", "you", "he", "she", "it", "we", "they"]
 
 # Sample list
 list_with_prepositions_pronouns = ["This", "is", "a", "sentence", "with", "some", "prepositions", "and","pronouns", "in", "it"]
+# list of keywords
+keywords = ["apple", "banana", "orange"]
+
+# reading the file
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+
+# initializing counters
+no_match = 0
+one_match = 0
+two_match = 0
+
+# loop through the lines in the file
+for line in lines:
+    matches = 0
+    # loop through the keywords
+    for keyword in keywords:
+        # check if the keyword is in the line
+        if keyword in line:
+            matches += 1
+    # check how many keywords are matched in the line
+    if matches == 0:
+        no_match += 1
+    elif matches == 1:
+        one_match += 1
+    elif matches == 2:
+        two_match += 1
+    else:
+        print("Line matching more than 2 keywords:", line)
+
+# print the results
+print("Lines not matching any keyword:", no_match)
+print("Lines matching exactly one keyword:", one_match)
+print("Lines matching exactly two keywords:", two_match)
 
 # Function to remove prepositions and pronouns
 def remove_prepositions_pronouns(list_with_prepositions_pronouns):
