@@ -101,7 +101,7 @@ def main():
         print("\n\n")
         print("Match Percentage: ", match_percentage)
     else:
-        print("This resume is not ATS compliant with the job description.")
+        print("This resume is not ATS compliant with the job description.correct the resume")
     
     match_count(matched_keywords)
 
