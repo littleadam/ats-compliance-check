@@ -5,4 +5,4 @@ the app calculates the word count and suggests correction on appearance of the r
 
 genAI technology is used to detect mismatch with the Job description , fix and provide the new resume that is  compatible with the Job description. 
 
-customize your resume in minutes
+customize your resume in minutes with ease
