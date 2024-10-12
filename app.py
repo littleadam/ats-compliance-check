@@ -8,7 +8,7 @@ load_dotenv()
 import google.generativeai as genai
 import PyPDF2 as pdf
 
-genai.configure(api_key="AIzaSyD0Y-aGZ_BvwyqTzQQnlQNtLafLQC3WUhE")
+genai.configure(api_key="")
 def get_gemini_response(input):
   model=genai.GenerativeModel('gemini-1.5-pro')
   response=model.generate_content(input)
